@@ -4,32 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>My portfolio</title>
 </head>
 <body>
-    <header>
-        <span>Hello,&nbsp;My&nbsp;name&nbsp;is</span>
-        <h1>Jane&nbsp;Doe</h1>
-        <span>Full-Stack&nbsp;Developer</span>
+    <header class="section">
+        <span class="hello">Hello,&nbsp;My&nbsp;name&nbsp;is</span>
+        <h1>Jane Doe</h1>
+        <span class="fullstack-dev">Full-Stack Developer</span>
         <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores.</p>
-        <nav>
-            <a href="#bibliography">Bibliography</a>
-            <a href="#what-i-do">What&nbsp;I&nbsp;Do?</a>
-            <a href="#awards">Awards</a>
-            <a href="#experience">Experience</a>
-            <a href="#my-portfolio">My Portfolio</a>
-            <a href="#contact">Contact</a>
+        <nav class="nav">
+            <a class="nav__link" href="#biography">Biography</a>
+            <a class="nav__link" href="#what-i-do">What&nbsp;I&nbsp;Do?</a>
+            <a class="nav__link" href="#awards">Awards</a>
+            <a class="nav__link" href="#experience">Experience</a>
+            <a class="nav__link" href="#my-portfolio">My&nbsp;Portfolio</a>
+            <a class="nav__link" href="#contact">Contact</a>
         </nav>
     </header>
 
-    <section id="bibliography">
-        <h2>Bibliography</h2>
-        <div>
-            <img src="avatar.svg" alt="avatar">
-            <span>Jane&nbsp;Doe</span>
-            <span>Full-Stack&nbsp;Developer</span>
+    <section id="biography" class="section biography">
+        <div class="avatar">
+            <img class="avatar__img" src="avatar.svg" alt="avatar">
+            <span class="avatar__title">Jane Doe</span>
+            <span class="avatar__subtitle">Full-Stack Developer</span>
         </div>
+
+        <h2 class="section-title">Biography</h2>
         <p>I'm a Freelancer Front-end Developer with over 3 years of experience. I'm from San Francisco. I code and create web
             elements for amazing people around the world. I like work with new people. New people new experiences.
         </p>
@@ -40,36 +44,34 @@
         <p>Neque sodales ut etiam sit amet nisl. Et tortor at risus viverra adipiscing. Augue neque gravida in fermentum. Purus
             ut faucibus pulvinar elementum. Aliquam malesuada bibendum arcu vitae elementum. Sit amet luctus venenatis lectus
             magna fringilla urna.
-        </p>
+        </p>        
     </section>
 
-    <section id="what-i-do">
-        <h2>What&nbsp;I&nbsp;Do?</h2>
-        <!-- todo DEFINITION LIST ? -->
-        <ul>
+    <section id="what-i-do" class="section what-i-do">
+        <h2 class="section-title">What&nbsp;I&nbsp;Do?</h2>
+        <ul class="what-i-do-list">
             <li>
-                <article>
-                    <img src="pencil-alt-solid.svg" alt="web design image image">
-                    <h3>Web&nbsp;Design</h3>
-                    <p>Laoreet sit amet cursus sit amet. Amet commodo nulla facilisi nullam vehicula. In arcu cursus euismod quis viverra.
+                <article class="card">
+                    <img class="card__img" src="pencil-alt-solid.svg" alt="web design image image">
+                    <h3 class="card__title">Web&nbsp;Design</h3>
+                    <p class="card__text">Laoreet sit amet cursus sit amet. Amet commodo nulla facilisi nullam vehicula. In arcu cursus euismod quis viverra.
                         Sit amet risus nullam eget felis eget.
                     </p>
                 </article>
             </li>
             <li>
-                <article>
-                    <img src="desktop-solid.svg" alt="web development image">
-                    <h3>Web&nbsp;Development</h3>
-                    <p>Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. Ornare lectus sit amet est placerat in.
+                <article class="card">
+                    <img class="card__img" src="desktop-solid.svg" alt="web development image">
+                    <h3 class="card__title">Web&nbsp;Development</h3>
+                    <p class="card__text">Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. Ornare lectus sit amet est placerat in.
                         Facilisi nullam vehicula ipsum a arcu cursus.
                     </p>
                 </article>
-            </li>
             <li>
-                <article>
-                    <img src="bullseye-solid.svg" alt="seo marketing image">
-                    <h3>Seo&nbsp;Marketing</h3>
-                    <p>Libero enim sed faucibus turpis in eu mi bibendum neque. Montes nascetur ridiculus mus mauris vitae. Vitae turpis
+                <article class="card">
+                    <img class="card__img" src="bullseye-solid.svg" alt="seo marketing image">
+                    <h3 class="card__title">Seo&nbsp;Marketing</h3>
+                    <p class="card__text">Libero enim sed faucibus turpis in eu mi bibendum neque. Montes nascetur ridiculus mus mauris vitae. Vitae turpis
                         massa sed elementum tempus egestas.
                     </p>
                 </article>
@@ -77,45 +79,51 @@
         </ul>
     </section>
 
-    <section id="awards">
-        <h2>Awards</h2>
-        <ul>
-            <li><img src="trophy-solid.svg" alt="award icon">Creative&nbsp;Designer</li>
-            <li><img src="trophy-solid.svg" alt="award icon">Yearly&nbsp;Best&nbsp;Performer</li>
-            <li><img src="trophy-solid.svg" alt="award icon">Best&nbsp;Learner&nbsp;Award</li>
+    <section id="awards" class="section awards">
+        <h2 class="section-title">Awards</h2>
+        <ul class="awards-list">
+            <li class="awards-list__item"><img src="trophy-solid.svg" alt="award icon"><span>Creative&nbsp;Designer</span></li>
+            <li class="awards-list__item"><img src="trophy-solid.svg" alt="award icon"><span>Yearly&nbsp;Best&nbsp;Performer</span></li>
+            <li class="awards-list__item"><img src="trophy-solid.svg" alt="award icon"><span>Best&nbsp;Learner&nbsp;Award</span></li>
         </ul>
     </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <ol>
-            <li>
+    <section id="experience" class="section">
+        <h2 class="section-title">Experience</h2>
+        <ol class="experience-list">
+            <li class="experience-list__item">
                 <article>
-                    <time datetime="2021-02">Feb&nbsp;2021&nbsp;-&nbsp;Present</time>
-                    <span>Full&nbsp;Time</span>
-                    <h3>Google&nbsp;LLC&nbsp;-&nbsp;Sr.&nbsp;Front-end&nbsp;Engineer</h3>
-                    <p>In nisl nisi scelerisque eu ultrices. Congue eu consequat ac felis donec et odio pellentesque diam. Volutpat ac
+                    <header>
+                        <time datetime="2021-02">Feb&nbsp;2021&nbsp;-&nbsp;Present</time>
+                        <span class="badge">Full&nbsp;Time</span>
+                    </header>
+                    <h3 class="card__title">Google&nbsp;LLC&nbsp;-&nbsp;Sr.&nbsp;Front-end&nbsp;Engineer</h3>
+                    <p class="card__text">In nisl nisi scelerisque eu ultrices. Congue eu consequat ac felis donec et odio pellentesque diam. Volutpat ac
                         tincidunt vitae semper quis lectus nulla. Bibendum enim facilisis gravida neque convallis a cras semper auctor.
                         Maecenas ultricies mi eget mauris pharetra et.
                     </p>
                 </article>
             </li>
-            <li>
+            <li class="experience-list__item">
                 <article>
-                    <time datetime="2020-03">Mar 2020&nbsp;-&nbsp;Present</time>
-                    <span>Part&nbsp;Time</span>
-                    <h3>Ridian&nbsp;IT&nbsp;-&nbsp;Visual&nbsp;Designer</h3>
-                    <p>Fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel. Viverra maecenas accumsan lacus vel facilisis
+                    <header>
+                        <time datetime="2020-03">Mar 2020&nbsp;-&nbsp;Present</time>
+                        <span class="badge badge--secondary">Part&nbsp;Time</span>
+                    </header>
+                    <h3 class="card__title">Ridian&nbsp;IT&nbsp;-&nbsp;Visual&nbsp;Designer</h3>
+                    <p class="card__text">Fermentum odio eu feugiat pretium nibh ipsum consequat nisl vel. Viverra maecenas accumsan lacus vel facilisis
                         volutpat est velit. Elit duis tristique sollicitudin nibh sit. Porta non pulvinar neque laoreet.
                     </p>
                 </article>
             </li>
-            <li>
+            <li class="experience-list__item">
                 <article>
-                    <time datetime="2019-01">Jan&nbsp;2019&nbsp;-&nbsp;Present</time>
-                    <span>Full&nbsp;Time</span>
-                    <h3>IB&nbsp;Themes&nbsp;-&nbsp;Animation&nbsp;artist</h3>
-                    <p>Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Sodales ut etiam sit amet nisl purus in mollis.
+                    <header>
+                        <time datetime="2019-01">Jan&nbsp;2019&nbsp;-&nbsp;Present</time>
+                        <span class="badge">Full&nbsp;Time</span>
+                    </header>
+                    <h3 class="card__title">IB&nbsp;Themes&nbsp;-&nbsp;Animation&nbsp;artist</h3>
+                    <p class="card__text">Lobortis elementum nibh tellus molestie nunc non blandit massa enim. Sodales ut etiam sit amet nisl purus in mollis.
                         Pharetra diam sit amet nisl suscipit adipiscing bibendum. Egestas fringilla phasellus faucibus scelerisque eleifend
                         donec pretium vulputate. Ut venenatis tellus in metus vulputate eu scelerisque.
                     </p>
@@ -124,94 +132,119 @@
         </ol>
     </section>
 
-    <section id="my-portfolio">
-        <h2>My&nbsp;Portfolio</h2>
-        <ul>
-            <li>
+    <section id="my-portfolio" class="section">
+        <h2 class="section-title">My&nbsp;Portfolio</h2>
+        <ul class="my-portfolio-list">
+            <li class="my-portfolio-list__item">
                 <article>
                     <img src="https://dummyimage.com/640x360/f7f7ff/555555" alt="portfolio article image">
-                    <h3>Lorem ipsum</h3>
-                    <time datetime="2305-07-13">07/13/2305</time>
+                    <h3 class="portfolio-item-title">Lorem&nbsp;ipsum</h3>
+                    <time class="portfolio-item-time" datetime="2305-07-13">07/13/2305</time>
                     <p>Eu non diam phasellus vestibulum lorem sed risus ultricies. Id eu nisl nunc mi ipsum faucibus. Fermentum iaculis eu
                         non diam phasellus. In iaculis nunc sed augue.
                     </p>
-                </article>                
+                </article>
             </li>
-            <li>
+            <li class="my-portfolio-list__item">
                 <article>
                     <img src="https://dummyimage.com/640x360/f7f7ff/555555" alt="portfolio article image">
-                    <h3>Lorem ipsum</h3>
-                    <time datetime="2305-07-13">07/13/2305</time>
+                    <h3 class="portfolio-item-title">Lorem&nbsp;ipsum</h3>
+                    <time class="portfolio-item-time" datetime="2305-07-13">07/13/2305</time>
                     <p>Eu non diam phasellus vestibulum lorem sed risus ultricies. Id eu nisl nunc mi ipsum faucibus. Fermentum iaculis eu
                         non diam phasellus. In iaculis nunc sed augue.
                     </p>
-                </article>                
+                </article>
             </li>
-            <li>
+            <li class="my-portfolio-list__item">
                 <article>
                     <img src="https://dummyimage.com/640x360/f7f7ff/555555" alt="portfolio article image">
-                    <h3>Lorem ipsum</h3>
-                    <time datetime="2305-07-13">07/13/2305</time>
+                    <h3 class="portfolio-item-title">Lorem&nbsp;ipsum</h3>
+                    <time class="portfolio-item-time" datetime="2305-07-13">07/13/2305</time>
                     <p>Eu non diam phasellus vestibulum lorem sed risus ultricies. Id eu nisl nunc mi ipsum faucibus. Fermentum iaculis eu
                         non diam phasellus. In iaculis nunc sed augue.
                     </p>
-                </article>                
+                </article>
+            </li>
+            <li class="my-portfolio-list__item">
+                <article>
+                    <img src="https://dummyimage.com/640x360/f7f7ff/555555" alt="portfolio article image">
+                    <h3 class="portfolio-item-title">Lorem&nbsp;ipsum</h3>
+                    <time class="portfolio-item-time" datetime="2305-07-13">07/13/2305</time>
+                    <p>Eu non diam phasellus vestibulum lorem sed risus ultricies. Id eu nisl nunc mi ipsum faucibus. Fermentum iaculis eu
+                        non diam phasellus. In iaculis nunc sed augue.
+                    </p>
+                </article>
+            </li>
+            <li class="my-portfolio-list__item">
+                <article>
+                    <img src="https://dummyimage.com/640x360/f7f7ff/555555" alt="portfolio article image">
+                    <h3 class="portfolio-item-title">Lorem&nbsp;ipsum</h3>
+                    <time class="portfolio-item-time" datetime="2305-07-13">07/13/2305</time>
+                    <p>Eu non diam phasellus vestibulum lorem sed risus ultricies. Id eu nisl nunc mi ipsum faucibus. Fermentum iaculis eu
+                        non diam phasellus. In iaculis nunc sed augue.
+                    </p>
+                </article>
+            </li>
+            <li class="my-portfolio__list__item">
+                <article>
+                    <img src="https://dummyimage.com/640x360/f7f7ff/555555" alt="portfolio article image">
+                    <h3 class="portfolio-item-title">Lorem&nbsp;ipsum</h3>
+                    <time class="portfolio-item-time" datetime="2305-07-13">07/13/2305</time>
+                    <p>Eu non diam phasellus vestibulum lorem sed risus ultricies. Id eu nisl nunc mi ipsum faucibus. Fermentum iaculis eu
+                        non diam phasellus. In iaculis nunc sed augue.
+                    </p>
+                </article>
             </li>
         </ul>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
+    <section id="contact" class="section contact">
+        <h2 class="section-title">Contact</h2>
 
-        <!-- todo section? -->
-        <h3>What's&nbsp;your&nbsp;story? Get&nbsp;in&nbsp;touch</h3>
-        <p>Always available for freelancing if the right project comes along. Feel free to contact me.</p>
-        <address>
-            <ul>
-                <li>
-                    <img src="map-marker-alt-solid.svg" alt="contact address icon">
-                    <span>Champ&nbsp;de&nbsp;Mars, 5&nbsp;Av.&nbsp;Anatole&nbsp;France, 75007&nbsp;Paris,&nbsp;Francie</span>
-                </li>
-                <li>
-                    <img src="envelope-regular.svg" alt="contact email icon">
-                    <a href="mailto:support@domain.com">support@domain.com</a>
-                </li>
-                <li>
-                    <img src="mobile-alt-solid.svg" alt="contact telephone icon">
-                    <a href="tel:555-2368">555-2368</a>
-                </li>
-            </ul>
-        </address>
+        <section class="get-in-touch">
+            <h3>What's&nbsp;your&nbsp;story? Get&nbsp;in&nbsp;touch</h3>
+            <p>Always available for freelancing if the right project comes along. Feel free to contact me.</p>
+            <address>
+                <ul class="contact-list">
+                    <li class="contact-list__item">
+                        <img class="icon" src="map-marker-alt-solid.svg" alt="contact address icon">
+                        <span>Champ&nbsp;de&nbsp;Mars, 5&nbsp;Av.&nbsp;Anatole&nbsp;France, 75007&nbsp;Paris,&nbsp;Francie</span>
+                    </li>
+                    <li class="contact-list__item">
+                        <img class="icon" src="envelope-regular.svg" alt="contact email icon">
+                        <a href="mailto:support@domain.com">support@domain.com</a>
+                    </li>
+                    <li class="contact-list__item">
+                        <img class="icon" src="mobile-alt-solid.svg" alt="contact telephone icon">
+                        <a href="tel:555-2368">555-2368</a>
+                    </li>
+                </ul>
+            </address>
+        </section>
 
-        <!-- todo section? -->
-        <h3>Say&nbsp;Something</h3>
-        <form method="post">
-            <label for="fullname">Fullname</label>
-            <input type="text" name="fullname" id="fullname">
-
-            <label for="email">Email address</label>
-            <input type="email" name="email" id="email">
-
-            <label for="subject">Subject</label>
-            <input type="text" name="subject" id="subject">
-
-            <label for="comment">Type comment</label>
-            <textarea name="comment" id="comment" rows="5"></textarea>
-
-            <input type="submit" name="submit-send-message" id="submit" value="Send Message">
-        </form>
+        <section class="say-something">
+            <h3>Say&nbsp;Something</h3>
+            <form method="post" class="form">
+                <input class="form__input" type="text" name="fullname" id="fullname" placeholder="Full name">
+                <input class="form__input" type="email" name="email" id="email" placeholder="Email address">
+                <input class="form__input" type="text" name="subject" id="subject" placeholder="Subject">
+                <textarea class="form__input" name="comment" id="comment" rows="5" placeholder="Type comment"></textarea>
+                <input class="form__input form__input--submit" type="submit" name="submit-send-message" id="submit" value="Send Message">
+            </form>
+        </section>
 
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.99144060821!2d2.2922926158566725!3d48.85837360866156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2zRWlmZmVsb3ZhIHbEm8W-!5e0!3m2!1scs!2scz!4v1650570173590!5m2!1scs!2scz"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            class="map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
     </section>
 
-    <footer>
-        <img src="twitter-square-brands.svg" alt="twitter icon">
-        <img src="facebook-square-brands.svg" alt="facebook icon">
-        <span>&copy;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet<time datetime="2022">&nbsp;2022</time></span>
+    <footer class="section footer">
+        <div class="social-links">
+            <a class="social-links__link" href="#"><img class="icon" src="twitter-square-brands.svg" alt="twitter icon"></a>
+            <a class="social-links__link" href="#"><img class="icon" src="facebook-square-brands.svg" alt="facebook icon"></a>
+        </div>
+        <small class="copyright">&copy;&nbsp;Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet<time datetime="2022">&nbsp;2022</time></small>
     </footer>
 </body>
 </html>
