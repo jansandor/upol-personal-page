@@ -265,6 +265,10 @@ ul, ol {
     margin-top: 3rem;
 }
 
+.say-something {
+    margin-top: 3rem;
+}
+
 .contact-list {
     display: flex;
     flex-flow: column;
@@ -287,10 +291,6 @@ ul, ol {
     font-weight: 900;
     text-decoration: none;
     color: var(--color-title);
-}
-
-.say-something {
-    margin-top: 3rem;
 }
 
 .form {
