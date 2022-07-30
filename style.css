@@ -6,6 +6,8 @@
     --color-borders: #bbbbbb;
     --color-separators: #eeeeee;
     --color-header-bg-circle: #ffca93;
+    --section-padding-small: 4vw;
+    --section-padding-big: 20vw;
 }
 
 html {
@@ -39,8 +41,12 @@ ul, ol {
     padding: 0;
 }
 
+.bg-blue {
+    background-color: var(--color-bg);
+}
+
 .section {
-    padding: 4vw;
+    padding: var(--section-padding-small);
 }
 
 .section-title {
@@ -64,6 +70,15 @@ ul, ol {
     z-index: -1;
 }
 
+.separator {
+    display: block;
+    height: 6px;
+    background-image: url(border-dark.png);
+    background-size: contain;
+    border: unset;
+    margin: 0 var(--section-padding-small);
+}
+
 .icon {
     width: 32px;
     height: 32px;
@@ -76,9 +91,9 @@ ul, ol {
 }
 
 .fullstack-dev {
+    display: block;
     color: var(--color-primary);
-    font-size: 2em;
-    font-weight: 900;
+    font-size: 0.3em;
 }
 
 .nav {
@@ -98,29 +113,13 @@ ul, ol {
     text-align: center;
 }
 
-.header-avatar {
-    display: none;
-}
-
 /**/
 
 /* BIOGRAPHY */
 
-.biography {
-    background-color: var(--color-bg);
-    /* todo border-image vs ::after ?? */
-    /* border-bottom: 1px solid var(--color-separators); */
-    /* border-image: url(border-dark.png) 30% 6px initial repeat; */
-    /* border-image-source: url(border-dark.png); */
-    /* border-width: 0 0 auto 0; */
-    /* border-image-slice: fill; */
-    /* border-image-width: auto; */
-    /* border-image-repeat: repeat; */
-}
-
 .avatar {
     text-align: center;
-    margin-bottom: 3.8em;
+    margin: 0 0 3.8em 0;
 }
 
 .avatar__img {
@@ -147,16 +146,12 @@ ul, ol {
 
 /* WHAT I DO */
 
-.what-i-do {
-    background-color: var(--color-bg);
-    padding-bottom: 0;
-}
-
 .what-i-do-list {
     display: flex;
-    gap: 1em;
     flex-flow: row wrap;
+    gap: 1em;
     margin-bottom: 0;
+    margin-top: 1em;
 }
 
 .card {
@@ -167,9 +162,8 @@ ul, ol {
 }
 
 .card__img {
-    max-width: 80px;
-    /* width: 80px;
-    height: 80px; */
+    width: 80px;
+    height: 80px;
     margin-bottom: 4.5rem;
 }
 
@@ -185,10 +179,6 @@ ul, ol {
 
 /* AWARDS */
 
-.awards {
-    background-color: var(--color-bg);
-}
-
 .awards-list {
     display: flex;
     flex-flow: column nowrap;
@@ -198,7 +188,6 @@ ul, ol {
 
 .awards-list__item {
     display: flex;
-    height: 100%;
     align-items: center;
     border-radius: 1em;
     background-color: white;
@@ -265,10 +254,6 @@ ul, ol {
 
 /* CONTACT */
 
-.contact {
-    background-color: var(--color-bg);
-}
-
 .contact-flex__item {
     margin-top: 3rem;
 }
@@ -307,6 +292,10 @@ ul, ol {
     padding: 1em;
     margin-bottom: 1em;
     width: 100%;
+}
+
+.form__input--textarea {
+    resize: vertical;
 }
 
 .form__input--submit {
@@ -382,10 +371,9 @@ ul, ol {
         border-bottom: 3px solid var(--color-primary);
     }
 
-    .nav__link:active {
-        /* border-bottom: 3px solid var(--color-primary); */
-    }
+    /**/
 
+    /* BIOGRAPHY */
     /**/
 
     /* AWARDS */
@@ -398,31 +386,12 @@ ul, ol {
         text-align: center;
         padding: 2em;
         flex-flow: column nowrap;
-        flex: 1 1 auto;
-        /* todo fix items size */
+        flex: 1 1 0;
     }
 
     /**/
 
     /* EXPERIENCE */
-
-    /*
-
-    .experience-list {
-        display: flex;
-        gap: 1em;
-        flex-flow: column nowrap;
-        margin-bottom: 0;
-    }
-
-    .experience-list__item {
-        background-color: var(--color-bg);
-        padding: 1em;
-        border-radius: 1em;
-        display: flex;
-    }
-
-    */
 
     .experience-list__item {
         padding: 2em;
@@ -451,7 +420,6 @@ ul, ol {
     .experience-item__content .card__text {
         margin-bottom: 6px;
     }
-
 
     /**/
     
@@ -498,35 +466,37 @@ ul, ol {
     /* HEADER */
 
     header.section {
-        /* background: radial-gradient(1600px circle at 80vw 50%, var(--color-header-bg-circle) 20%, transparent 20.1%); */
-        /* todo avatar position: relative; */
+        position: relative;
+        background: radial-gradient(1600px circle at 80% 50%, var(--color-header-bg-circle) 20%, transparent 20.1%);
     }
 
-    .header-avatar {
-        /* todo  */
-        /* display: block;
-        width: 35%;
-        max-width: 388px;
+    header.section::after {
+        display: block;
+        content: '';
+        background: url('avatar.svg') no-repeat;
+        background-size: 400px 376px;
+        width: 400px;
+        height: 376px;
         position: absolute;
+        right: 4vw;
         bottom: 0;
-        right: 4vw; */
+        padding: 0;
     }
 
     /**/
 
     /* BIOGRAPHY */
 
-    .biography {
+    .biography-flex {
         display: flex;
-        /* align-items: center; */
+        gap: 6em;
     }
 
     .avatar {
-        flex: 1;
         display: flex;
         flex-flow: column nowrap;
+        align-items: center;
         margin-bottom: initial;
-        text-align: left;
     }
 
     .avatar__img {
@@ -534,26 +504,21 @@ ul, ol {
     }
 
     .biography-content {
-        flex: 2;
+        flex: 1 1 70%;
+        margin-top: 3em;
     }
 
     /**/
 
     /* WHAT I DO */
-    
-    .what-i-do-list {
-        flex-flow: row nowrap;
-    }
 
     .what-i-do-list__item {
-        flex: 1 1 auto;
-        /* todo fix items size */
+        flex: 1 1 0;
     }
 
     /**/
 
     /* EXPERIENCE */
-
     /**/
 
     /* PORTFOLIO */
@@ -584,16 +549,47 @@ ul, ol {
 
 @media only screen and (min-width: 1200px) {
     .section {
-        padding-left: 20vw;
-        padding-right: 20vw;
-        /* width: 1140px; */
+        padding-left: var(--section-padding-big);
+        padding-right: var(--section-padding-big);
+    }
+
+    .separator {
+        margin: 0 var(--section-padding-big);
     }
 
     /* HEADER */
 
-    .header-avatar {
-        /* right: calc(20vw + 1em); */
+    header.section {
+        background: radial-gradient(2000px circle at 85% 50%, var(--color-header-bg-circle) 20%, transparent 20.1%);
     }
 
+    header.section::after {
+        right: 8vw;
+    }
+
+    /**/
+}
+
+@media only screen and (min-width: 1600px) { 
+    /* HEADER */
+    header.section {
+        background: radial-gradient(2800px circle at 85% 25%, var(--color-header-bg-circle) 20%, transparent 20.1%);
+    }
+
+    header.section::after {
+        right: 15vw;
+    }
+    /**/
+}
+
+@media only screen and (min-width: 1800px) { 
+    /* HEADER */
+    header.section {
+        background: radial-gradient(2800px circle at 80% 25%, var(--color-header-bg-circle) 20%, transparent 20.1%);
+    }
+
+    header.section::after {
+        right: var(--section-padding-big);
+    }
     /**/
 }

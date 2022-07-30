@@ -13,8 +13,7 @@
 <body>
     <header class="section">
         <span class="hello">Hello,&nbsp;My&nbsp;name&nbsp;is</span>
-        <h1>Jane Doe</h1>
-        <span class="fullstack-dev">Full-Stack Developer</span>
+        <h1>Jane Doe <span class="fullstack-dev">Full-Stack Developer</span></h1>
         <p class="intro-text">I design and develop services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores.</p>
         <nav class="nav">
             <a class="nav__link" href="#biography">Biography</a>   
@@ -24,66 +23,66 @@
             <a class="nav__link" href="#my-portfolio">My&nbsp;Portfolio</a>
             <a class="nav__link" href="#contact">Contact</a>
         </nav>
-        <img class="header-avatar" src="avatar.svg" alt="avatar">
     </header>
 
-    <section id="biography" class="section biography">
-        <div class="avatar">
-            <img class="avatar__img" src="avatar.svg" alt="avatar">
-            <span class="avatar__title">Jane Doe</span>
-            <span class="avatar__subtitle">Full-Stack Developer</span>
+    <section id="biography" class="section bg-blue">
+        <div class="biography-flex">
+            <figure class="avatar">
+                <img class="avatar__img" src="avatar.svg" alt="avatar">
+                <figcaption>
+                    <span class="avatar__title">Jane Doe</span>
+                    <span class="avatar__subtitle">Full-Stack Developer</span>
+                </figcaption>
+            </figure>
+            <article class="biography-content">
+                <h2 class="section-title">Biography</h2>
+                <p>I'm a Freelancer Front-end Developer with over 3 years of experience. I'm from San Francisco. I code and create web
+                    elements for amazing people around the world. I like work with new people. New people new experiences.
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Id interdum velit laoreet id donec ultrices tincidunt arcu. Suspendisse sed nisi lacus sed. Dolor sed
+                    viverra ipsum nunc aliquet bibendum enim. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet.
+                </p>
+                <p>Neque sodales ut etiam sit amet nisl. Et tortor at risus viverra adipiscing. Augue neque gravida in fermentum. Purus
+                    ut faucibus pulvinar elementum. Aliquam malesuada bibendum arcu vitae elementum. Sit amet luctus venenatis lectus
+                    magna fringilla urna.
+                </p>
+            </article>       
         </div>
-
-        <div class="biography-content">
-            <h2 class="section-title">Biography</h2>
-            <p>I'm a Freelancer Front-end Developer with over 3 years of experience. I'm from San Francisco. I code and create web
-                elements for amazing people around the world. I like work with new people. New people new experiences.
-            </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Id interdum velit laoreet id donec ultrices tincidunt arcu. Suspendisse sed nisi lacus sed. Dolor sed
-                viverra ipsum nunc aliquet bibendum enim. Mi ipsum faucibus vitae aliquet nec ullamcorper sit amet.
-            </p>
-            <p>Neque sodales ut etiam sit amet nisl. Et tortor at risus viverra adipiscing. Augue neque gravida in fermentum. Purus
-                ut faucibus pulvinar elementum. Aliquam malesuada bibendum arcu vitae elementum. Sit amet luctus venenatis lectus
-                magna fringilla urna.
-            </p>
-        </div>        
     </section>
+    
+    <div class="bg-blue">    
+        <hr class="separator">
+    </div>
 
-    <section id="what-i-do" class="section what-i-do">
+    <section id="what-i-do" class="section bg-blue">
         <h2 class="section-title">What&nbsp;I&nbsp;Do?</h2>
-        <!-- todo solve ul li -->
-        <ul class="what-i-do-list">
-            <li class="what-i-do-list__item">
-                <article class="card">
-                    <img class="card__img" src="pencil-alt-solid.svg" alt="web design image image">
-                    <h3 class="card__title">Web&nbsp;Design</h3>
-                    <p class="card__text">Laoreet sit amet cursus sit amet. Amet commodo nulla facilisi nullam vehicula. In arcu cursus euismod quis viverra.
-                        Sit amet risus nullam eget felis eget.
-                    </p>
-                </article>
-            </li>
-            <li class="what-i-do-list__item">
-                <article class="card">
-                    <img class="card__img" src="desktop-solid.svg" alt="web development image">
-                    <h3 class="card__title">Web&nbsp;Development</h3>
-                    <p class="card__text">Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. Ornare lectus sit amet est placerat in.
-                        Facilisi nullam vehicula ipsum a arcu cursus.
-                    </p>
-                </article>
-            <li class="what-i-do-list__item">
-                <article class="card">
-                    <img class="card__img" src="bullseye-solid.svg" alt="seo marketing image">
-                    <h3 class="card__title">Seo&nbsp;Marketing</h3>
-                    <p class="card__text">Libero enim sed faucibus turpis in eu mi bibendum neque. Montes nascetur ridiculus mus mauris vitae. Vitae turpis
-                        massa sed elementum tempus egestas.
-                    </p>
-                </article>
-            </li>
-        </ul>
+        <div class="what-i-do-list">
+            <article class="what-i-do-list__item card">
+                <img class="card__img" src="pencil-alt-solid.svg" alt="web design image image">
+                <h3 class="card__title">Web&nbsp;Design</h3>
+                <p class="card__text">Laoreet sit amet cursus sit amet. Amet commodo nulla facilisi nullam vehicula. In arcu cursus euismod quis viverra.
+                    Sit amet risus nullam eget felis eget.
+                </p>
+            </article>
+            <article class="what-i-do-list__item card">
+                <img class="card__img" src="desktop-solid.svg" alt="web development image">
+                <h3 class="card__title">Web&nbsp;Development</h3>
+                <p class="card__text">Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed velit. Ornare lectus sit amet est placerat in.
+                    Facilisi nullam vehicula ipsum a arcu cursus.
+                </p>
+            </article>
+            <article class="what-i-do-list__item card">
+                <img class="card__img" src="bullseye-solid.svg" alt="seo marketing image">
+                <h3 class="card__title">Seo&nbsp;Marketing</h3>
+                <p class="card__text">Libero enim sed faucibus turpis in eu mi bibendum neque. Montes nascetur ridiculus mus mauris vitae. Vitae turpis
+                    massa sed elementum tempus egestas.
+                </p>
+            </article>
+        </div>
     </section>
 
-    <section id="awards" class="section awards">
+    <section id="awards" class="section bg-blue">
         <h2 class="section-title">Awards</h2>
         <ul class="awards-list">
             <li class="awards-list__item"><img src="trophy-solid.svg" alt="award icon"><span>Creative Designer</span></li>
@@ -208,9 +207,8 @@
         </ul>
     </section>
 
-    <section id="contact" class="section contact">
+    <section id="contact" class="section bg-blue">
         <h2 class="section-title">Contact</h2>
-
         <div class="contact-flex">
             <section class="contact-flex__item">
                 <h3>What's&nbsp;your&nbsp;story? Get&nbsp;in&nbsp;touch</h3>
@@ -232,7 +230,6 @@
                     </ul>
                 </address>
             </section>
-
             <section class="contact-flex__item">
                 <h3>Say&nbsp;Something</h3>
                 <form method="post" class="form">
@@ -241,12 +238,11 @@
                         <input class="form__input" type="email" name="email" id="email" placeholder="Email address">
                     </div>
                     <input class="form__input" type="text" name="subject" id="subject" placeholder="Subject">
-                    <textarea class="form__input" name="comment" id="comment" rows="5" placeholder="Type comment"></textarea>
-                    <input class="form__input form__input--submit" type="submit" name="submit-send-message" id="submit" value="Send Message">
+                    <textarea class="form__input form__input--textarea" name="comment" id="comment" rows="5" placeholder="Type comment"></textarea>
+                    <button class="form__input form__input--submit" type="submit" name="submit-send-message" id="submit">Send Message</button>
                 </form>
             </section>
         </div>
-
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.99144060821!2d2.2922926158566725!3d48.85837360866156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2zRWlmZmVsb3ZhIHbEm8W-!5e0!3m2!1scs!2scz!4v1650570173590!5m2!1scs!2scz"
             class="map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
