@@ -7,11 +7,12 @@
     --color-separators: #eeeeee;
     --color-header-bg-circle: #ffca93;
     --section-padding-small: 4vw;
-    --section-padding-big: 20vw;
+    --max-content-width: 1140px;
+    --font: 'Roboto', sans-serif;
 }
 
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font);
 }
 
 body {
@@ -36,9 +37,10 @@ img {
     height: auto;
 }
 
-ul, ol {
+ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .bg-blue {
@@ -46,11 +48,13 @@ ul, ol {
 }
 
 .section {
-    padding: var(--section-padding-small);
+    padding: 2vw var(--section-padding-small);
+    max-width: var(--max-content-width);
+    margin: auto;
 }
 
 .section-title {
-    margin: 0;
+    margin: 0.5em 0 1em 0;
     bottom: 0.025rem;
     position: relative;
     z-index: 1;
@@ -76,7 +80,7 @@ ul, ol {
     background-image: url(border-dark.png);
     background-size: contain;
     border: unset;
-    margin: 0 var(--section-padding-small);
+    margin: 0;  
 }
 
 .icon {
@@ -183,7 +187,7 @@ ul, ol {
     display: flex;
     flex-flow: column nowrap;
     gap: 1em;
-    margin-bottom: 0;
+    margin-bottom: 1em;
 }
 
 .awards-list__item {
@@ -216,6 +220,7 @@ ul, ol {
     padding: 1em;
     border-radius: 1em;
     display: flex;
+    flex-flow: column nowrap;
 }
 
 .badge {
@@ -240,6 +245,8 @@ ul, ol {
     display: grid;
     gap: 1em;
     margin-bottom: 0;
+    max-width: var(--max-content-width);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .portfolio-item__title {
@@ -296,6 +303,7 @@ ul, ol {
 
 .form__input--textarea {
     resize: vertical;
+    font-family: var(--font);
 }
 
 .form__input--submit {
@@ -395,40 +403,32 @@ ul, ol {
 
     .experience-list__item {
         padding: 2em;
-    }
-
-    .experience-item {
-        display: flex;
+        flex-flow: row nowrap;
         align-items: center;
+        gap: 2em;
     }
 
-    .experience-item header {
+    .experience-list__item__header {
         flex: 1;
-        margin-right: 2em;
     }
 
-    .experience-item__content {
-        padding-left: 2em;
+    .experience-list__item__content {
         flex: 3;
+        padding-left: 2em;
         border-left: 1px solid var(--color-separators);
     }
 
-    .experience-item__content .card__title {
+    .experience-list__item__content .card__title {
         margin-top: 1.5em;
     }
 
-    .experience-item__content .card__text {
+    .experience-list__item__content .card__text {
         margin-bottom: 6px;
     }
 
     /**/
     
     /* PORTFOLIO */
-    
-    .portfolio-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     /**/
 
     /* CONTACT */
@@ -465,6 +465,10 @@ ul, ol {
 @media only screen and (min-width: 960px) {
     /* HEADER */
 
+    .bg-header {
+        background: linear-gradient(to right, rgba(255,255,255,1) 70%, var(--color-header-bg-circle) 70%, var(--color-header-bg-circle) 100%); 
+    }
+
     header.section {
         position: relative;
         background: radial-gradient(1600px circle at 80% 50%, var(--color-header-bg-circle) 20%, transparent 20.1%);
@@ -496,6 +500,7 @@ ul, ol {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+        justify-content: center;
         margin-bottom: initial;
     }
 
@@ -522,11 +527,6 @@ ul, ol {
     /**/
 
     /* PORTFOLIO */
-
-    .portfolio-list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
     /**/
 
     /* CONTACT */
@@ -544,52 +544,5 @@ ul, ol {
         margin-top: 0;
     }
 
-    /**/
-}
-
-@media only screen and (min-width: 1200px) {
-    .section {
-        padding-left: var(--section-padding-big);
-        padding-right: var(--section-padding-big);
-    }
-
-    .separator {
-        margin: 0 var(--section-padding-big);
-    }
-
-    /* HEADER */
-
-    header.section {
-        background: radial-gradient(2000px circle at 85% 50%, var(--color-header-bg-circle) 20%, transparent 20.1%);
-    }
-
-    header.section::after {
-        right: 8vw;
-    }
-
-    /**/
-}
-
-@media only screen and (min-width: 1600px) { 
-    /* HEADER */
-    header.section {
-        background: radial-gradient(2800px circle at 85% 25%, var(--color-header-bg-circle) 20%, transparent 20.1%);
-    }
-
-    header.section::after {
-        right: 15vw;
-    }
-    /**/
-}
-
-@media only screen and (min-width: 1800px) { 
-    /* HEADER */
-    header.section {
-        background: radial-gradient(2800px circle at 80% 25%, var(--color-header-bg-circle) 20%, transparent 20.1%);
-    }
-
-    header.section::after {
-        right: var(--section-padding-big);
-    }
     /**/
 }
