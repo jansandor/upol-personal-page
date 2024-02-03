@@ -1,3 +1,5 @@
-# zapoctovy-projekt
+# Personal Website - zápočtový projekt
 
-Veškeré informace k zápočtovému projektu naleznete zde: http://trnecka.inf.upol.cz/teaching/web/projekt-2022/
+Projekt byl vytvořen v rámci kurzu KMI/WEB Tvorba webových stránek na fakultě informatiky Univerzity Palackého.
+
+Zaměření kurzu: HTML a CSS.
