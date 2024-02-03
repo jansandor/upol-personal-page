@@ -6,7 +6,7 @@ Zaměření kurzu: HTML, CSS, responzivní design.
 
 ---
 
-# Personal Website - Credit Project
+# :uk: Personal Website - Credit Project
 
 The project was created as part of the course KMI/WEB Web Design at the Faculty of Informatics, Palacký University.
 
